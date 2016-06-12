@@ -1,0 +1,18 @@
+<div class="article-nav">
+	{{ if .NextInSection }}
+	<span class="next-article p-paging">
+		<a href="{{ .NextInSection.Permalink }}">
+			<i class="fa fa-angle-left ar-left" aria-hidden="true"></i>
+			<div class="a-nav-text">{{ .NextInSection.Title }}</div>
+		</a>
+	</span>
+	{{ end }}
+	{{ if .PrevInSection }}
+	<span class="prev-article p-paging">
+		<a href="{{ .PrevInSection.Permalink }}">
+			<div class="a-nav-text">{{ .PrevInSection.Title }}</div>
+			<i class="fa fa-angle-right ar-right" aria-hidden="true"></i>
+		</a>
+	</span>
+	{{ end }}
+</div>

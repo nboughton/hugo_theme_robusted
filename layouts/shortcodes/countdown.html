@@ -1,0 +1,23 @@
+<span id='countdown-{{ .Get "id" }}' class="countdown"></span>
+<script type="text/javascript">
+(function() {
+	var f   = function(n) { return n < 10 ? n = "0"+n : n }
+	var out = function(d, h, m, s) { return f(d) + "d, " + f(h) + "h, " + f(m) + "m and " + f(s) + "s" }
+	var el  = document.getElementById('countdown-{{ .Get "id" }}')
+	var to  = new Date({{ .Get "date" }})
+	setInterval(function() {
+		var now  = new Date()
+		var diff = (to.getTime() - now.getTime())/1000
+		if (diff > 0) {
+			el.innerText = out(
+				Math.floor(diff/3600/24), // Days
+				Math.floor(diff/3600)%24, // Hours
+				Math.floor(diff/60)%60,   // Minutes
+				Math.floor(diff%60)       // Seconds
+			)
+		} else {
+			el.innerText = out(0, 0, 0, 0)
+		}
+	}, 1000)
+})()
+</script>

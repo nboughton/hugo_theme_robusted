@@ -1,0 +1,10 @@
+<li>
+  <a href="{{ .Permalink }}" class="clearfix">
+    <span class="title">{{ .Title }}</span>
+    <div class="date">
+      <small>
+        <time>{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
+      </small>
+    </div>
+  </a>
+</li>

@@ -1,0 +1,83 @@
+</head>
+<body>
+  <nav class="navbar navbar-inverse container" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-navbar-collapse">  
+        <ul class="nav navbar-nav navbar-right">
+          {{ if ne (len .Site.Menus) 0 }}
+          {{ range .Site.Menus }}
+          {{ range . }}
+          {{ if .HasChildren }}
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              {{ .Pre }} {{ .Name }}<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              {{ range .Children }}
+              <li><a href="{{ .URL }}">{{ .Name }} </a></li>
+              {{ end }}
+            </ul>
+          </li>
+          {{ else }}
+          <li><a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a></li>
+          {{ end }}
+          {{ end }}
+          {{ end }}
+          {{ end }}
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              CATEGORIES/TAGS<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              {{ range $key, $value := .Site.Taxonomies }}
+              <li class="dropdown-header">{{ $key | singularize }}</li>
+              {{ range first 10 $value.ByCount }}
+              <li>
+                <a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+              {{ end }}
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              LATEST<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              {{ range first 10 .Site.Pages }}
+              {{ .Render "li" }}
+              {{ end }}
+            </ul>
+          </li>
+          {{ if isset .Site.Params "twitterName" }}
+          <li>
+            <a href="http://twitter.com/{{ .Site.Params.twitterName }}">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ if isset .Site.Params "githubName" }}
+          <li>
+            <a href="http://github.com/{{ .Site.Params.githubName }}">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          {{end}}
+          <li>
+            <a href="{{ .Site.BaseURL }}index.xml">
+              <i class="fa fa-rss" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
