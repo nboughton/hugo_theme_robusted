@@ -1,5 +1,5 @@
 # hugo_theme_robusted
-robusted is a Hugo theme based on Daisuke Tsuji's Robust theme
+Robusted is a Hugo theme based on Daisuke Tsuji's [Robust](https://github.com/dim0627/hugo_theme_robust) theme
 
 ## Supports
 + disqus
