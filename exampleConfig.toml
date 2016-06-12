@@ -1,0 +1,18 @@
+baseurl = "http://example.com/"
+title = "example site"
+author = "author"
+copyright = "Copyright (c) 2015 - 2016, Nick Boughton; <a href='http://creativecommons.org/licenses/by-nc/4.0/'>some rights reserved</a>."
+canonifyurls = true
+paginate = 9
+
+[params]
+	disqusShortname = ""
+	twitterName = ""
+	githubName = ""
+
+[[menu.main]]
+	name = "BLOG"
+	url = "/categories/blog/"
+	pre = ""
+	weight = -60
+
