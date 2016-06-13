@@ -1,6 +1,6 @@
 name = "Robusted"
 license = "MIT"
-licenselink = "https://github.com/dim0627/hugo_theme_robust/blob/master/LICENSE.md"
+licenselink = "https://github.com/nboughton/hugo_theme_robusted/blob/master/LICENSE"
 description = "Robusted is blog theme for hugo, originally based on Daisuke Tsuji's Robust theme."
 tags = ["blog"]
 features = ["blog"]
