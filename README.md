@@ -11,3 +11,6 @@ Custom css should go in static/custom.css
 
 ## Example site
 [nboughton.uk](http://nboughton.uk)
+
+## Notes
+Robusted is currently under development and may change quite regularly.
