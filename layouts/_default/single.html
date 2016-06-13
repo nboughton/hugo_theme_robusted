@@ -39,9 +39,10 @@
 <div class="container">
   <div class="row">
     <article class="single">
-      <div class="image" style="background-image: url({{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }});"></div>
+      <div class="image" style="background-image: url({{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }});">
+      {{ partial "credit.html" . }}
+      </div>
       <div class="body">
-        {{ partial "credit.html" . }}
         {{ partial "article_nav.html" . }}
         <h1>{{ .Title }}</h1>
         {{ if and .IsPage (ne .Params.toc false) }}
