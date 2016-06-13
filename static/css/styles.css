@@ -273,8 +273,9 @@ article.single .image {
 article.single .image .i-credit {
   align-self: flex-end;
   padding: 0.2em;
-  border-radius: 3px;
+  border-top-left-radius: 2px;
   background-color: rgba(255, 255, 255, 0.35);
+  font-size: 0.8em;
 }
 
 @media (max-width: 768px) {
