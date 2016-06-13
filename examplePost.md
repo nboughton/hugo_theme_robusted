@@ -4,6 +4,8 @@ title = "post title"
 categories = [ "blog" ]
 toc = false
 image = "default.jpg"
+credit = "Someone"
+creditlink = "http://someonessite.com"
 +++
 
 Content goes here
