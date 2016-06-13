@@ -19,8 +19,10 @@ body {
   font-family: 'Roboto Slab', sans-serif;
   font-size: inherit;
   line-height: 1rem;
+  /*
   background-color: black;
   color: lightgrey;
+  */
 }
 
 .navbar {
@@ -223,7 +225,6 @@ article.grid {
   height: 24rem;
   max-height: 24rem;
   overflow: hidden;
-  /*box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6); You only need this if you invert the colour scheme */
 }
 
 article.grid .image {
@@ -356,6 +357,15 @@ ol.h-inline {
 }
 
 /* Article/page paging */
+.navbar-default, article.grid, article.single {
+  border: 0;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.navbar-default {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
 .article-nav, nav.p-paging {
   margin-top: 1em;
   display: inline-flex;
