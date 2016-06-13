@@ -19,10 +19,7 @@ body {
   font-family: 'Roboto Slab', sans-serif;
   font-size: inherit;
   line-height: 1rem;
-  /*
-  background-color: black;
-  color: lightgrey;
-  */
+  background-color: lightgrey;
 }
 
 .navbar {
@@ -115,12 +112,12 @@ h5 { font-size: 1rem; line-height: 1rem; }
   margin-top: 4rem;
   padding: 1rem 0;
   font-size: .8rem;
-  color: #b0bec5;
+  color: #333;
   text-align: center;
 }
 
 .l-footer a {
-  color: #78909c;
+  color: #555;
 }
 
 /* Parts:share */
