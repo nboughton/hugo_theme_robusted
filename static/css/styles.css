@@ -11,21 +11,12 @@ html {
   font-size: 14px;
 }
 
-* {
-  word-break: keep-all;
-}
-
 body {
-  /*font-family: 'Roboto Slab', sans-serif;*/
   font-family: sans-serif;
   font-size: inherit;
   line-height: 1rem;
   background-color: lightgrey;
   color: #5e5e5e;
-}
-
-.navbar {
-  font-family: sans-serif;
 }
 
 a {
@@ -103,13 +94,6 @@ h5 { font-size: 1rem; line-height: 1rem; }
 }
 
 /* Layouts */
-.l-header {
-  background-color: #fff;
-  padding: 1.5rem 0;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 .l-footer {
   margin-top: 4rem;
   padding: 1rem 0;
@@ -307,8 +291,25 @@ article.single .body {
 }
 
 @media (max-width: 768px) {
+  article.single, article.grid, article.grid .image {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  article.grid {
+    box-shadow: none;
+  }
+
   article.single .body {
     padding: 0 1rem;
+  }
+
+  article.single .image {
+      border-radius: 0;
+  }
+
+  .navbar {
+    margin-bottom: 0;
   }
 }
 
@@ -372,6 +373,12 @@ ol.h-inline {
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 768px) {
+  article.grid {
+    box-shadow: none;
+  }
+}
+
 .navbar-default {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
@@ -381,11 +388,6 @@ ol.h-inline {
   display: inline-flex;
   width: 100%;
   justify-content: center center;
-}
-
-nav.p-paging {
-  margin-top: -1em;
-  margin-bottom: 1em;
 }
 
 .body .article-nav span a {
