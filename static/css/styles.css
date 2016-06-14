@@ -317,6 +317,10 @@ article.single .body a {
   text-decoration: underline;
 }
 
+article.single .pager a {
+  text-decoration: none;
+}
+
 article.single .body p {
   margin: 1rem 0;
   line-height: 1.5rem;
@@ -367,6 +371,14 @@ ol.h-inline {
 }
 
 /* Article/page paging */
+.pager a {
+  color: #555;
+}
+
+.pager li a {
+  border: 1px solid #78909c;
+}
+
 .navbar-default, article.grid, article.single {
   border: 0;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
@@ -381,57 +393,6 @@ ol.h-inline {
 .navbar-default {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-}
-.article-nav, nav.p-paging {
-  margin-top: 1em;
-  display: inline-flex;
-  width: 100%;
-  justify-content: center center;
-}
-
-.body .article-nav span a {
-  color: #5e5e5e;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.a-nav-arrow {
-  font-size: 1.5em;
-  font-weight: 700;
-}
-
-.ar-right {
-  margin-left: 0.5em;
-}
-
-.ar-left {
-  margin-right: 0.5em;
-}
-
-.prev-page {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.next-page {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.prev-article {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.next-article {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-start;
 }
 
 .countdown {
