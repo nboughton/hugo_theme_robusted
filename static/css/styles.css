@@ -371,12 +371,10 @@ ol.h-inline {
 }
 
 /* Article/page paging */
-.pager a {
-  color: #555;
-}
-
 .pager li a {
+  color: #555;
   border: 1px solid #78909c;
+  border-radius: 5px;
 }
 
 .navbar-default, article.grid, article.single {
