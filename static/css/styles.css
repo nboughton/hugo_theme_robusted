@@ -295,10 +295,6 @@ article.single .body {
     margin: 0;
   }
 
-  article.grid {
-    box-shadow: none;
-  }
-
   article.single .body {
     padding: 0 1rem;
   }
@@ -384,7 +380,7 @@ ol.h-inline {
 
 @media (max-width: 768px) {
   article.grid {
-    box-shadow: none;
+    box-shadow:  0 2px 3px 0 rgba(0, 0, 0, 0.5);
   }
 }
 
