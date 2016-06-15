@@ -5,7 +5,9 @@
 
     <div class="row">
       {{ range (.Paginate .Data.Pages).Pages }}
+      <div class="col-sm-4">
         {{ .Render "grid" }}
+      </div>
       {{ end }}
     </div>
 
