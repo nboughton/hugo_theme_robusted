@@ -260,6 +260,10 @@ article.single .small-image {
   width: 5%;
 }
 
+article.single .medium-image {
+  width: 25%;
+}
+
 @media (max-width: 768px) {
   article.single .image {
     min-height: 12rem;
