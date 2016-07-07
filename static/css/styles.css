@@ -265,8 +265,17 @@ article.single .medium-image {
   width: 25%;
 }
 
-.textwrap {
+article.single .large-image {
+  width: 50%;
+}
+
+.textwrap-right {
   float: right;
+  margin: 1em;
+}
+
+.textwrap-left {
+  float: left;
   margin: 1em;
 }
 
