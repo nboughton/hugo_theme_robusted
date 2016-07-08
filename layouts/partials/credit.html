@@ -1,6 +1,6 @@
 <div class="i-credit">
 	<small>
-		Image Credit:
+		Credit:
 		{{ if isset $.Params "credit" }}
 			{{ with $.Params.creditlink }}<a href="{{ . }}">{{ $.Params.credit }}</a>
 			{{ else }}{{ $.Params.credit }}{{ end }}
