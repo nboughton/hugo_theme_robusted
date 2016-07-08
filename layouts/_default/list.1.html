@@ -1,0 +1,26 @@
+{{ partial "header_before.html" . }}
+{{ partial "header_after.html" . }}
+
+<div class="container">
+
+  <div class="row">
+    {{ range (.Paginate .Data.Pages).Pages }}
+    <div class="col-sm-6 col-md-4">
+      <a href="{{ .Permalink }}">
+        <div class="thumbnail">
+          <img src="{{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }}" />
+          <div class="caption">
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Summary }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ partial "pagination.html" . }}
+
+</div>
+
+{{ partial "footer.html" . }}
