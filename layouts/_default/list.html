@@ -3,23 +3,39 @@
 
 <div class="container">
 
-  <div class="row">
+  <!--div class="row">
     {{ range (.Paginate .Data.Pages).Pages }}
-    <div class="col-md-4 panel panel-default">
-      <div class="panel-body">
-        <a href="{{ .Permalink }}">
-          <div class="thumbnail">
-            <img src="{{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }}" />
-            <div class="caption">
-              <h3>{{ .Title }}</h3>
-              <p>{{ .Summary }}</p>
+    <div class="col-sm-6 col-md-4">
+      <a href="{{ .Permalink }}">
+        <div class="thumbnail">
+          <img src="{{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }}" />
+          <div class="caption">
+            <h3>{{ .Title }}</h3>
+            <div class="date">
+              <time>{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
             </div>
+            <p>{{ .Summary }}</p>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
     {{ end }}
+  </div-->
+
+  {{ range (.Paginate .Data.Pages).Pages }}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </div>
+    <div class="panel-body">
+      {{ .Summary }}
+      <span class="read-on"><a href="{{ .Permalink }}">Read more...</a></span>
+    </div>
+    <div class="panel-footer">
+      <time>{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
+    </div>
   </div>
+  {{ end }}
 
   {{ partial "pagination.html" . }}
 
